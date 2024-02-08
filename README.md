@@ -8,6 +8,6 @@ I have used a blend of Blueprint and C++ to create the core mechanics, as well a
 I have included a build version of the game for easy testing. There is solo play which will allow you to play the game single player or networked.
 If you choose network play, it will connect to a small dedicated server I host to enable you to join others who might be playing at the same time.
 
-You can find the download here on my Google Drive: https://drive.google.com/file/d/1eptVOj-G3tpVSStCwVjAKBAzAT8TaIwW/view?usp=sharing
+You can find the download here on my Google Drive: https://drive.google.com/file/d/1FDo0nJgUcYSVVQAfs2vP8UyUEvctW9a6/view?usp=sharing
 
 Feel free to clone and use this simple example if you so wish.
