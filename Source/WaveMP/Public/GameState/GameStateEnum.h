@@ -5,7 +5,7 @@
 #include "GameStateEnum.generated.h"
 
 UENUM(BlueprintType)
-enum class EGameState : uint8
+enum class EGameStatus : uint8
 {
 	Waiting UMETA(DisplayName = "Waiting"),
 	Playing UMETA(DisplayName = "Playing"),

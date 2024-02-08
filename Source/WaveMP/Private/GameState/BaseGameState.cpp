@@ -17,7 +17,7 @@ void ABaseGameState::OnRep_CurrentGameState()
 	//empty onrep
 }
 
-void ABaseGameState::UpdateCurrentGameState(EGameState NewGameState)
+void ABaseGameState::UpdateCurrentGameState(EGameStatus NewGameState)
 {
 	CurrentGameState = NewGameState;
 }

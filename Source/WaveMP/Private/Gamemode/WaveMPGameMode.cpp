@@ -70,7 +70,7 @@ void AWaveMPGameMode::UpdateGameTimer()
 	CurrentGameState->GameTime += 1.f;
 	if(AnySurvivingPlayers())
 	{
-		SetNewGameState(EGameState::EndGame);
+		SetNewGameState(EGameStatus::EndGame);
 	}
 }
 
@@ -95,7 +95,7 @@ void AWaveMPGameMode::CreateAISpawner()
 	}
 }
 
-void AWaveMPGameMode::SetNewGameState(EGameState NewGameState)
+void AWaveMPGameMode::SetNewGameState(EGameStatus NewGameState)
 {
 	GameModeState = NewGameState;
 	if(CurrentGameState && GetWorld())
@@ -104,18 +104,18 @@ void AWaveMPGameMode::SetNewGameState(EGameState NewGameState)
 
 		switch (NewGameState)
 		{
-		case EGameState::Waiting:
+		case EGameStatus::Waiting:
 			GetWorld()->GetTimerManager().PauseTimer(GameTimer);
 			if(AnySurvivingPlayers())
 			{
 				NotifyAllEndGame();
 			}
 			break;
-		case EGameState::Playing:
+		case EGameStatus::Playing:
 			GetWorld()->GetTimerManager().UnPauseTimer(GameTimer);
 			SpawnDeadPlayers();
 			break;
-		case EGameState::EndGame:
+		case EGameStatus::EndGame:
 			GetWorld()->GetTimerManager().PauseTimer(GameTimer);
 			NotifyAllEndGame();
 			break;

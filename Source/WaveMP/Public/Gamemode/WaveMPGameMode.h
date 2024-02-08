@@ -37,7 +37,7 @@ protected:
 	void CreateAISpawner();
 
 	UFUNCTION(BlueprintCallable)
-	void SetNewGameState(EGameState NewGameState);
+	void SetNewGameState(EGameStatus NewGameState);
 
 	UFUNCTION()
 	bool AnySurvivingPlayers();
@@ -58,7 +58,7 @@ protected:
 	TArray<AActor*> AllPlayerStarts;
 
 	UPROPERTY()
-	EGameState GameModeState = EGameState::Waiting;
+	EGameStatus GameModeState = EGameStatus::Waiting;
 
 	UPROPERTY()
 	ABaseGameState* CurrentGameState = nullptr;
